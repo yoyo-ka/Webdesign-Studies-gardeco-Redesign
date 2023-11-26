@@ -1,0 +1,1063 @@
+@charset "utf-8";
+
+
+/********** Webfont-Einbindung **********/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@1,400;1,700&display=swap');
+
+
+/*
+* CSS-Design Styles
+* gardeco-Website
+* Online-Schule fuer Gestaltung: Webdesign-Kurs
+*/
+
+
+/********** Farben **********/
+
+:root {
+    --red: #78002d;
+    --pink: #f3cccc;
+    --dark: #31352d;
+    --green: #8db145;
+    --grey: #f0f0f0;
+    --white: #fff;
+}
+
+
+/********** Typo **********/
+
+body {
+    font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+    font-size: 1.25rem; /* 20px */
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Serif', Georgia, Times, serif;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--red);
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 3.75rem; /* 60px */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2.5rem; /* 40px */
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 1.875rem; /* 30px */
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 1.625rem; /* 26px; */
+    margin-bottom: 16px;
+}
+
+h5 {
+    font-size: 1.5rem; /* 24px; */
+    margin-bottom: 14px;
+}
+
+h6 {
+    font-size: 1.375rem; /* 22px; */
+    margin-bottom: 12px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+a.text-link {
+    color: var(--green);
+}
+
+a.text-link:hover {
+    text-decoration: underline;
+}
+
+blockquote {
+    font-size: 1.875rem; /* 30px */
+    font-style: italic;
+    margin: 50px;
+}
+
+ul, ol {
+    margin: 0 0 12px 20px;
+}
+
+hr {
+    border: solid 1px var(--pink);
+    margin: 35px auto;
+    max-width: 50%;
+}
+
+
+/********* Tabellen **********/
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    border: solid 1px var(--green);
+    border-radius: 10px;
+    display: block;
+    overflow-x: auto;
+}
+
+thead {
+    background: var(--green);
+    color: var(--white);
+}
+
+th, td {
+    padding: 5px 10px;
+    border-left: solid 1px var(--green);
+    border-top: solid 1px var(--green);
+}
+
+th:first-child, td:first-child {
+    border-left: none;
+}
+
+th {
+    text-align: left;
+    border-top: none;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--grey);
+}
+         
+tbody tr:nth-child(odd) {
+    background-color: var(--white);
+}
+
+
+/********** Formulare **********/
+
+form {
+    margin: 30px 0;
+}
+
+form fieldset {
+    border: dashed 3px var(--grey);
+    border-radius: 10px;
+    padding: 0 15px 15px;
+}
+
+form label {
+    display: block;
+    font-weight: 700;
+    margin: 15px 0 8px;
+}
+
+input, textarea {
+    font: 400 1.25rem/1.4 'Noto Sans', Helvetica, Arial, sans-serif;
+    transition: background 0.2s linear 0s;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+    width: 100%;
+    border: solid 1px var(--dark);
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+input[type='checkbox'] {
+    accent-color: var(--green);
+    margin-left: 20px;
+    margin-right: 6px;
+}
+
+input.check-first {
+    margin-left: 0;
+}
+
+textarea {
+    height: 150px;
+}
+
+input:hover, textarea:hover, input:focus, textarea:focus {
+    background: var(--grey);
+}
+
+input:focus, textarea:focus {
+    border: solid 2px var(--dark);
+}
+
+input[type='submit'] {
+    border: none;
+    margin: 15px 0 8px;
+}
+
+
+/********** Buttons **********/
+
+.btn {
+   display: inline-block;
+   background-color: var(--green);
+   color: var(--white);
+   padding: 15px 25px;
+   border-radius: 10px;
+   transition: all 0.2s linear 0s;
+}
+
+.btn:hover {
+    background-color: var(--dark);
+    transform: translate(-2px, -2px);
+}
+
+
+/********** Link-Box **********/
+
+.link-box {
+    position: relative;
+    padding: 20px;
+    border: dashed 3px transparent;
+    border-radius: 20px;
+    transition: all 0.2s linear 0s;
+}
+
+.link-box:hover {
+    border: dashed 3px var(--grey);
+}
+
+.link-box h3 {
+    transition: all 0.2s linear 0s;
+}
+
+.link-box:hover h3 {
+    color: var(--green);
+}
+
+.link:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+a.link {
+    font-weight: 700;
+    color: var(--green);
+    padding-bottom: 5px;
+    border-bottom: solid 2px transparent;
+    transition: all 0.2s linear 0s;
+}
+
+a.link:hover {
+    border-bottom: solid 2px var(--green);
+}
+
+
+/********** Bilder **********/
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+img.alignleft {
+    float: left;
+    margin: 5px 15px 5px 0;
+}
+
+img.alignright {
+    float: right;
+    margin: 5px 0 5px 15px;
+}
+
+img.icon {
+    width: 170px;
+    height: 170px;
+}
+
+img.icon-pfeil {
+    width: 70px;
+    height: 70px;
+}
+
+
+/********** Header **********/
+
+.logo {
+    width: 250px;
+    border: none;
+}
+
+#navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    height: 106px;
+    margin: 0;
+}
+
+#navigation li {
+    list-style-type: none;
+}
+
+#navigation li.nav-link {
+    z-index: 1;
+}
+
+#navigation a {
+    display: block;
+    font-size: 1.5rem; /* 24px */
+    color: var(--dark);
+    padding: 8px 15px 10px;
+    margin: 3px;
+    border: solid 3px transparent;
+    border-radius: 10px;
+    transition: all 0.2s linear 0s;
+}
+
+#navigation a:hover {
+    color: var(--red);
+    border: solid 3px var(--pink);
+}
+
+#navigation a.active {
+    font-weight: 700;
+    background: var(--pink);
+}
+
+/* Media Query - Tablet Portrait */
+
+@media only screen and (max-width: 1023px) {
+    #navigation {
+        justify-content: flex-start;
+    }
+}
+
+/* Media Query - Smartphone Portrait */
+
+@media only screen and (max-width: 767px) {
+    .logo {
+        width: 175px;
+        height: auto;
+    }
+}
+
+
+/********** Drop-Down-Menü **********/
+
+@media only screen and (min-width: 1024px) {
+    #navigation li {
+        position: relative;
+    }
+
+    #navigation ul {
+        margin: 0;
+        display: none;
+        position: absolute;
+        top: 56px;
+        left: 2.5px;
+        padding-top: 5px;
+        z-index: -1;
+        background-color: var(--white);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0px 3px 3px rgba(0,0,0,0.1);
+    }
+
+    #navigation ul li a {
+        display: block;
+        margin: 0;
+    }
+
+    #navigation li:hover ul {
+        display: block;
+    }
+}
+
+#navigation ul li a {
+    font-size: 1.25rem; /* 20px */
+}
+
+
+/********** Off-Canvas-Navigation **********/
+
+@media only screen and (min-width: 1024px) {
+    #openBtn, #closeBtn {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .navMain, #content { 
+        transition: all .3s ease-in-out;
+    }
+
+    .navMain {
+        width: 230px;
+        height: 100%;
+        position: fixed;
+        right: -230px;
+        background: var(--pink);
+    }
+
+    #navigation {
+        margin-left: 10px;
+        margin-top: 22px;
+    }
+
+    #openBtn, 
+    #closeBtn {
+        background: var(--pink); 
+        min-width: 80px;
+        min-height: 80px;
+        color: var(--dark); 
+        padding: 17px 8px;
+        margin-top: 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    #openBtn, #closeNav:target #openBtn {
+        display: inline-block;
+    }
+
+    #closeBtn {
+        display: none;
+    }
+
+    /* wenn Navigation geöffnet ist */
+
+    #openNav:target .navMain {
+        right: 0;
+    }
+
+    #openNav:target #content {
+        margin-right: 230px;
+        margin-left: -230px;
+        position: fixed;
+        right: 0;
+    }
+
+    #openNav:target #openBtn {
+        display: none;
+    }
+
+    #openNav:target #closeBtn {
+        display: inline-block; 
+    }
+}
+
+
+/********** Breadcrumbs **********/
+
+section.breadcrumbs {
+    font-size: 1rem; /* 16px */
+    margin-bottom: 30px;
+}
+
+.breadcrumbs a {
+    color: var(--green);
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+
+/********** Subnavigation **********/
+
+.html-elemente {
+    margin: 5vh 0;
+    margin-top: 30px;
+}
+
+#subnavigation {
+    margin: 0;
+    margin-bottom: 50px;
+    border-top: solid 1px var(--pink);
+}
+
+#subnavigation li {
+    list-style: none;
+    border-bottom: solid 1px var(--pink);
+}
+
+#subnavigation li a {
+    display: block;
+    padding: 15px 20px;
+    transition: all 0.2s linear 0s;
+}
+
+#subnavigation li a:hover {
+    background: var(--pink);
+    color: var(--red);
+}
+
+#subnavigation li a.active {
+    background: var(--pink);
+    font-weight: 700;
+}
+
+.flex-container .content-right {
+    flex: 4;
+}
+
+
+/********** STARTSEITE **********/
+
+
+/********** Hero **********/
+
+.bg-hero {
+    position: relative;
+    min-height: 600px;
+    background-color: var(--dark); /* Fallback-Color */
+    background-image: url('../img/hero-start.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    text-align: center;
+}
+
+.hero h1 {
+    color: var(--white);
+    text-shadow: 3px 3px 8px var(--dark);
+}
+
+.hero .btn {
+    border: solid 1px var(--green);
+    box-shadow: 3px 3px 8px var(--dark);
+    transition: all 0.2s linear 0s;
+}
+
+.hero .btn:hover {
+    border: solid 1px var(--white);
+}
+
+
+/********** Leistungen **********/
+
+.leistungen article {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.leistungen .flex-container-1024px {
+    display: flex;
+    flex-flow: column;
+}
+
+.leistungen .flex-container-1024px a {
+    flex: 1;
+}
+
+.leistungen h2 {
+    text-align: center;
+}
+
+.leistungen img {
+    padding: 10px;
+    border: solid 3px var(--pink);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/* Media Query - Tablets Portrait */
+
+@media only screen and (max-width: 1024px) {
+    .leistungen article {
+        display: initial;
+    }
+    
+    .leistungen .flex-container-1024px {
+        flex-direction: row;
+    }
+}
+
+/* Media Query - Small Smartphones */
+
+@media only screen and (max-width: 576px) {
+    .leistungen .flex-container-1024px {
+        flex-direction: column;
+    }
+}
+
+
+/********** Über uns **********/
+
+.ueber {
+    background-color: var(--grey);
+    padding: 0;
+}
+
+.ueber .flex-container, .ueber .flex-container-1024px {
+    gap: 0;
+}
+
+.ueber .flex-container > * {
+    padding: 60px;
+}
+
+.ueber h2 {
+    text-align: left;
+}
+
+.ueber p {
+    margin-bottom: 30px;
+}
+
+.bg-ueber {
+    min-height: 600px;
+    background: var(--dark) url('../img/team-back.jpg') left center no-repeat;
+    background-size: cover;
+}
+
+/* Media Query - Smartphones Portrait */
+
+@media only screen and (max-width: 767px) {
+    .ueber .flex-container > * {
+        padding: 40px 25px;
+    }
+
+    .ueber .text {
+        text-align: center;
+    }
+
+    .ueber p {
+        text-align: left;
+    }
+}
+
+
+/********** News **********/
+
+.news article {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.news h2 {
+    text-align: center;
+}
+
+.news .text {
+    display: flex;
+    flex-flow: column;
+}
+
+.news .text a {
+    flex: 1;
+}
+
+
+/********** Workshops **********/
+
+.workshops .border {
+    font-size: 1.625rem; /* 26px */
+    font-style: italic;
+    text-align: center;
+    padding: 30px max(18%, 50px);
+    border: solid 5px var(--pink);
+    border-radius: 20px;
+}
+
+.workshops a img {
+    padding: 15px 20px;
+    border-radius: 20px;
+    transition: all 0.2s linear 0s;
+}
+
+.workshops a:hover img {
+    transform: translate(-2px, -2px);
+    box-shadow: 3px 3px 8px var(--grey);
+}
+
+
+/********** Jobs **********/
+
+.jobs {
+    background-color: var(--grey);
+    padding: 70px 0;
+}
+
+.jobs .text {
+    columns: 2;
+    column-gap: 60px;
+}
+
+.jobs h2 {
+    column-span: all;
+    text-align: center;
+}
+
+.jobs p {
+    margin-bottom: 40px;
+}
+
+/* Media Query - Smartphones Portrait */
+
+@media only screen and (max-width: 767px) {
+    .jobs .text {
+        columns: 1;
+    }
+
+    .jobs .text {
+        text-align: center;
+    }
+
+    .jobs p {
+        text-align: left;
+    }
+}
+
+
+/********** Pflanzenportraits **********/
+
+.portraits img {
+    display: block;
+    border: solid 1px var(--dark);
+    border-radius: 10px;
+}
+
+.portraits h2 {
+    text-align: left;
+}
+
+.portraits .link-box {
+    border: none;
+    padding: 15px 10px;
+    display: inline-block;
+    transform: translate(-10px, 0);
+}
+
+/* Media Query - Smartphones Portrait */
+
+@media only screen and (max-width: 767px) {
+    .portraits img {
+        margin-bottom: 30px;
+    }
+
+    .portraits .text {
+        text-align: center;
+    }
+
+    .portraits p {
+        text-align: left;
+    }
+}
+
+
+/********** Footer **********/
+
+footer {
+    background-color: var(--pink);
+    padding: 30px 0 10px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer section:nth-child(1) p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+footer section:nth-child(1) a:hover {
+    text-decoration: underline;
+}
+
+footer hr {
+    border: solid 1px var(--dark);
+    max-width: 100%;
+    margin: 0;
+}
+
+footer section:nth-child(2) p {
+    margin: 0;
+}
+
+footer section:nth-child(2) a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    transition: all 0.2s linear 0s;
+}
+
+footer section:nth-child(2) a:hover {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+footer section:nth-child(3) p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+footer section:nth-child(3) a {
+    display: flex;
+    flex-flow: row;
+    gap: 12px;
+    align-items: center;
+}
+
+footer section:nth-child(3) a:hover span {
+    text-decoration: underline;
+}
+
+aside {
+    font-size: 1.125rem; /* 18px */
+    text-align: center;
+    margin-top: 50px;
+}
+
+aside p:first-child {
+    font-family: 'Noto Serif', Georgia, Times, serif;
+    font-style: italic;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query - Smartphones Portrait */
+
+@media only screen and (max-width: 767px) {
+    footer section {
+        margin-bottom: 40px;
+    }
+}
+
+
+/********** Unterseite LEISTUNGEN **********/
+
+
+/********** Hero **********/
+
+.bg-hero-leistungen {
+    position: relative;
+    min-height: 600px;
+    background-color: var(--dark); /* Fallback-Color */
+    background-image: url('../img/hero-leistungen_full.jpg');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-hero-leistungen h1 {
+    color: var(--white);
+    text-shadow: 3px 3px 8px var(--dark);
+}
+
+
+/********** Jumps **********/
+
+.jumps p {
+    font-family: 'Noto Serif', Georgia, Times, serif;
+    font-style: italic;
+    font-size: 1.625rem; /* 26px */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.jumps h2, .jumps article {
+    text-align: center;
+}
+
+.jumps img.icon {
+    padding: 10px;
+    border: solid 3px var(--pink);
+    border-radius: 20px;
+}
+
+.jumps .link-box, .jumps .link-box:hover {
+    border: none;
+    border-radius: 0;
+    padding: 10px 0;
+    word-break: break-word;
+}
+
+.jumps a.link, .jumps a.link:hover {
+    border-bottom: none;
+}
+
+.jumps img.icon-pfeil {
+    transition: all 0.2s linear 0s;
+} 
+
+.jumps .link-box:hover img.icon-pfeil {
+    transform: translate(0, 10px);
+} 
+
+
+/********** Kundenstimme **********/
+
+.kunde {
+    background-color: var(--grey);
+    padding: 25px 0;
+    text-align: center;
+}
+
+.kunde p {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--red);
+    padding-bottom: 30px;
+}
+
+
+/********** Gartenplanung **********/
+
+.gartenplanung h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.gartenplanung article {
+    margin-bottom: 20px;
+}
+
+.gartenplanung img {
+    border: solid 1px var(--dark);
+    border-radius: 10px;
+}
+
+.planungsprozess {
+    text-align: center;
+    border: solid 3px var(--pink);
+    border-radius: 20px;
+    padding: 50px 30px;
+    margin: 100px 0;
+}
+
+
+/********** Ausführung **********/
+
+.ausfuehrung h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.ausfuehrung p.text {
+    columns: 2;
+    column-gap: 60px;
+    padding-bottom: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+    .ausfuehrung p.text {
+        columns: 1;
+    }
+}
+
+.ausfuehrung img {
+    border: solid 1px var(--dark);
+    border-radius: 10px;
+}
+
+.ausfuehrung a.text-link {
+    font-weight: 700;
+    color: var(--green);
+    padding-bottom: 5px;
+    border-bottom: solid 2px transparent;
+    transition: all 0.2s linear 0s;
+}
+
+.ausfuehrung a.text-link:hover {
+    text-decoration: none;
+    border-bottom: solid 2px var(--green);
+}
+
+.ausfuehrung .wrapper:nth-child(2) {
+    text-align: center;
+    background-color: var(--grey);
+    margin: 100px auto;
+    padding-block: 70px;
+}
+
+.ausfuehrung .wrapper:nth-child(2) p {
+    max-width: clamp(50%, 500px, 90%);
+    margin: 20px auto;
+}
+
+
+/********** Gartenpflege **********/
+
+.gartenpflege h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.gartenpflege p.text {
+    columns: 2;
+    column-gap: 60px;
+    padding-bottom: 30px;    
+}
+
+@media only screen and (max-width: 767px) {
+    .gartenpflege p.text {
+        columns: 1;
+    }
+}
+
+.gartenpflege img.icon {
+    padding: 10px;
+    border: solid 3px var(--pink);
+    border-radius: 20px;
+}
+
+.gartenpflege .button {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.gartenpflege article {
+    margin: 10px 0;
+}
+
+
+/********** Responsive Typo **********/
+
+/* Media Query - Tablets Landscape */
+
+@media only screen and (max-width: 1200px) {
+    html { font-size: 85%; }
+}
+
+/* Media Query - Smartphones Portrait */
+
+@media only screen and (max-width: 767px) {
+    html { font-size: 75%; }
+}
